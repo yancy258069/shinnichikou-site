@@ -1,0 +1,49 @@
+/* ===== 全体リセット ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html[lang="ja"] body { font-family: "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; }
+body { background-color: #f8f9fa; color: #333; line-height: 1.8; }
+
+/* ===== 言語切り替え ===== */
+.lang-switcher { background-color: #f1f3f5; text-align: right; padding: 10px 5%; font-size: 13px; border-bottom: 1px solid #dee2e6; }
+.lang-switcher a { color: #666; margin-left: 15px; text-decoration: none; }
+.lang-switcher a.active { color: #1a3f70; font-weight: bold; }
+
+/* ===== ヘッダーとナビゲーション (下線なし) ===== */
+header { background-color: #2f5f8f; color: #fff; font-size: 28px; font-weight: bold; text-align: center; padding: 25px 0; letter-spacing: 0.2em; }
+nav { background-color: #1a3f70; display: flex; justify-content: flex-start; flex-wrap: wrap; padding: 10px 20px; border: none; }
+nav a { color: #fff; margin: 5px 12px; padding: 8px 15px; border-radius: 4px; font-weight: 500; text-decoration: none; transition: 0.3s; }
+nav a.active, nav a:hover { background-color: #fff; color: #1a3f70; }
+
+/* ===== レイアウトコンテナ ===== */
+.container { width: 90%; max-width: 1100px; margin: 0 auto 50px; }
+.banner { width: 100%; text-align: center; margin-bottom: 30px; }
+.banner img { display: block; margin: 25px auto; border-radius: 8px; width: 100%; max-width: 1100px; height: 350px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+/* ===== セクション見出し ===== */
+h2 { color: #2f5f8f; font-weight: 600; margin-bottom: 20px; margin-top: 40px; border-left: 6px solid #2f5f8f; padding-left: 15px; }
+
+/* ===== クイックリンク (ナビと同じ名称) ===== */
+.quick-links { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 30px; }
+.quick-links a { flex: 1 1 180px; background-color: #2f5f8f; color: #fff; text-align: center; padding: 18px 10px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.quick-links a:hover { background-color: #1a3f70; transform: translateY(-2px); }
+
+/* ===== テーブルスタイル ===== */
+table { width: 100%; border-collapse: collapse; margin-top: 25px; background: #fff; }
+th, td { border: 1px solid #ccc; padding: 18px; vertical-align: middle; }
+th { background-color: #f0f4f8; color: #2f5f8f; width: 25%; text-align: center; font-weight: 600; }
+td { text-align: left; padding-left: 25px; }
+
+/* ===== 特殊レイアウト (取引条件) ===== */
+.terms-section { margin-top: 40px; display: flex; flex-wrap: nowrap; gap: 50px; align-items: center; }
+.terms-text { flex: 1.2; }
+.terms-image { flex: 1; }
+.terms-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+/* ===== フッター ===== */
+footer { background-color: #1a3f70; color: #fff; text-align: center; padding: 35px 20px; font-size: 14px; margin-top: 60px; line-height: 1.6; }
+
+@media (max-width: 768px) { 
+    .terms-section { flex-direction: column; } 
+    .quick-links a { flex: 1 1 100%; }
+    header { font-size: 22px; }
+}
